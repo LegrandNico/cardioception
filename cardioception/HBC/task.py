@@ -127,6 +127,7 @@ def trial(
     """
 
     from psychopy import core, event, visual
+    from psychopy_legacy.visual.ratingscale import RatingScale
 
     # Initialize default values
     confidence, confidenceRT = None, None
@@ -305,7 +306,7 @@ def trial(
             markerStart = np.random.choice(
                 np.arange(parameters["confScale"][0], parameters["confScale"][1])
             )
-            ratingScale = visual.RatingScale(
+            ratingScale = RatingScale(
                 parameters["win"],
                 low=parameters["confScale"][0],
                 high=parameters["confScale"][1],
